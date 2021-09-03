@@ -3,7 +3,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 # Get dates, high, and low temperatures from file.
-filename = 'F:/PyCharm/Mapping Global Earthquakes/data/world_fires_7_day.csv'
+filename = 'F:/PyCharm/Mapping Global Earthquakes/data/sitka_weather_2018_simple.csv'
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -26,10 +26,10 @@ ax.plot(dates, lows, c='blue', alpha=0.5)
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # Format plot.
-plt.title("World Fires", fontsize=24)
+plt.title("Sitka High and Low Temps", fontsize=24)
 plt.xlabel('', fontsize=16)
 fig.autofmt_xdate()
-plt.ylabel("Brightness(F)", fontsize=16)
+plt.ylabel("Temperature(F)", fontsize=16)
 plt.tick_params(axis='both', which='major', labelsize=16)
 
 plt.show()
