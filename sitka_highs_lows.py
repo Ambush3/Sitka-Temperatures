@@ -22,11 +22,11 @@ with open(filename) as f:
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red', alpha=0.5)
-ax.plot(dates, lows, c='blue', alpha=0.5)
+ax.plot(dates, lows, c='royalblue', alpha=0.5)
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # Format plot.
-plt.title("Sitka High and Low Temps", fontsize=24)
+plt.title("Sitka High and Low Temps", fontsize=22)
 plt.xlabel('', fontsize=16)
 fig.autofmt_xdate()
 plt.ylabel("Temperature(F)", fontsize=16)
